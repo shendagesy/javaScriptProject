@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Employee </title>
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <input type="file" id="fileUpload" />
+    <input type="button" id="upload" value="Upload" onclick="Upload()" />
+    <hr />
+    <div id="dvCSV"> </div>
+    <hr />
+
+    <p>Q1. Display all Employee names who are in department <b>AOO</b></p> <input
+        onclick="showAllEmployeesByDept('A00')" type="button" value="Show Result"> </input>
+    <div id='Q1Result'></div>
+
+    <p>Q2. Display EMP_LEVEL per DEPT.</p> 
+    <input onclick="showAllEmployeeslevelByDept('B01')" type="button" value="Show Result">
+    </input>
+    <div id='Q2Result'></div>
+
+    <p>Q3.Read sorting criteria from console and display the matching results.</p>
+     <input type="button" value="Show Result">
+    </input>
+
+    <p>Q4. Display EMP_NAME by HIRE_DATE(display format 24 Aug 2020) in order-newest to oldest.</p> <input type="button" value="Show Result">
+    </input>
+
+
+</body>
+
+</html>
