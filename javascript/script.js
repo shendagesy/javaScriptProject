@@ -57,7 +57,7 @@ function Upload() {
     alert("Please upload a valid CSV file.");
   }
 }
-
+//Display all Employee names who are in department 
 
  function showAllEmployeesByDept(deptName) {
    let employees = globalData.filter(dept => dept.DEPT === deptName);
@@ -67,9 +67,11 @@ function Upload() {
      var empCell = document.createElement("div");
      empCell.innerHTML = emplyee.DEPT + " = " + emplyee.LAST_NAME + " " + emplyee.FIRST_NAME + " " + emplyee.MID_INIT;
      Q1Result.appendChild(empCell);
+     console.table(empCell)
    });
  } 
 
+ //Display all Employee LEVEL per department. 
 
  function showAllEmployeeslevelByDept(deptName) {
   console.log("globalData", globalData);
@@ -85,8 +87,7 @@ function Upload() {
     let st;
     for(let j=0;j<globalData.length;j++){
      if(dept[i] === globalData[j].DEPT){
-       console.log(globalData[j])
-       if(st){
+             if(st){
         st = st + " ," + globalData[j]["EMP_LEVEL\r"]
        } else {
         st =  globalData[j]["EMP_LEVEL\r"]
@@ -96,7 +97,7 @@ function Upload() {
     }
     Temp.push({ key : dept[i], value : st})
   }
-  
+
   console.log("dept[i", Temp);
   var Q1Result = document.getElementById('Q2Result');
   Temp.forEach(emplyee => {
@@ -104,7 +105,6 @@ function Upload() {
     empCell.innerHTML = emplyee.key + "=" + emplyee.value
     Q1Result.appendChild(empCell);
   });
-
 } 
 
 
